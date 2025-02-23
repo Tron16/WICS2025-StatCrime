@@ -7,6 +7,10 @@ export const Navbar = () => {
     navigate("/city/New York/NY");
   };
 
+  const handleContact = () => {
+    navigate("/contact");
+  };
+
   return (
     <nav className="fixed w-full top-0 z-50 px-4 py-3">
       <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-lg rounded-full border border-white/20 px-6 py-3 flex items-center justify-between">
@@ -23,14 +27,9 @@ export const Navbar = () => {
           <a
             href="#about"
             className="text-white/90 hover:text-white transition-colors"
+            onClick={handleContact}
           >
             About
-          </a>
-          <a
-            href="#contact"
-            className="text-white/90 hover:text-white transition-colors"
-          >
-            Contact
           </a>
           <button
             onClick={handleEnterApp}
