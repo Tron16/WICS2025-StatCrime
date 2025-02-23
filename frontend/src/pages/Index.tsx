@@ -81,7 +81,7 @@ const Index = () => {
                 <div key={city} className="animate-on-load opacity-0">
                   <CityButton
                     city={city}
-                    state={["NY", "CA", "IL", "TX", "VA"][index]}
+                    state={["NY", "CA", "IL", "TX", "DC"][index]}
                     onClick={() =>
                       handleCityClick(
                         city,
