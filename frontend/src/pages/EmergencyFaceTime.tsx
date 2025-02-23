@@ -23,16 +23,16 @@ const EmergencyFaceTime = () => {
 
           {/* Video placeholder */}
           <div className="animate-on-load opacity-0">
-            <div className="aspect-w-16 aspect-h-9 bg-white/10 rounded-2xl overflow-hidden mb-8">
+            <div className="aspect-w-16 aspect-h-auto bg-white/10 rounded-2xl overflow-hidden mb-8">
               <video
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
                 playsInline
-                loop
-                muted
-                autoPlay
-                poster="/placeholder.svg"
+                controls
               >
-                <source src="/your-video.mp4" type="video/mp4" />
+                <source
+                  src="/lovable-uploads/facetimeclip.mp4"
+                  type="video/mp4"
+                />
               </video>
             </div>
             <br />
