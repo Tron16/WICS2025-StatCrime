@@ -26,9 +26,6 @@ df['hour'] = df['TIME_OCC'].dt.hour
 df = df.dropna(subset=['LAT', 'LON'])
 
 
-# ------------------------------
-# Overall Spatial Safety Score
-# ------------------------------
 coords = df[['LAT', 'LON']].values
 kde = KernelDensity(bandwidth=0.01, kernel='gaussian')
 kde.fit(coords)
@@ -57,9 +54,6 @@ most_dangerous_location = (lat_grid[min_idx], lon_grid[min_idx])
 print("Safest location (lat, lon):", safest_location)
 print("Most dangerous location (lat, lon):", most_dangerous_location)
 
-#-------------------------------
-# Safety by Hour in the Most Dangerous Location
-#-------------------------------
 def calculate_distance(row):
     crime_location = (row['LAT'], row['LON'])
     return great_circle(most_dangerous_location, crime_location).meters
@@ -79,9 +73,7 @@ print("Safest hour (Top 100 crimes):", safest_time_top_100)
 print("Most dangerous hour (Top 100 crimes):", most_dangerous_time_top_100)
 print("Average Hourly Safety Score:" + str(averageMostDangerous))
 
-# ------------------------------
-# Time Analysis: Overall Safety by Hour
-# ------------------------------
+
 
 hour_safety = {}
 for h in sorted(df['hour'].unique()):
@@ -108,9 +100,6 @@ print("Safest hour (time):", safest_time)
 print("Most dangerous hour (time):", most_dangerous_time)
 
 
-# ------------------------------
-# Visualization
-# ------------------------------
 
 
 # Reverse the white->red list so that the first color (lowest safety) is red

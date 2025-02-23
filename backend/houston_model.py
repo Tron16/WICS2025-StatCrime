@@ -38,9 +38,7 @@ most_dangerous_location = (lat_grid[min_idx], lon_grid[min_idx])
 print("Safest location (lat, lon):", safest_location)
 print("Most dangerous location (lat, lon):", most_dangerous_location)
 
-# ------------------------------
-# Time Analysis: Most Dangerous Safety by Hour
-# ------------------------------
+# Hourly safety score for most dangerous location
 def calculate_distance(row):
     crime_location = (row['MapLatitude'], row['MapLongitude'])
     return great_circle(most_dangerous_location, crime_location).meters  
@@ -59,9 +57,6 @@ averageMostDangerous = 0
 for hour, score in hour_safety_top_100.items():
     print(f"Hour {hour}:00 - Safety Score: {score:.4f}")
 
-# ------------------------------
-# Time Analysis: Safety by Hour
-# ------------------------------
 
 
 hour_safety = {}
@@ -87,10 +82,6 @@ most_dangerous_time = min(hour_safety, key=hour_safety.get)
 print("Safest hour (time):", safest_time)
 print("Most dangerous hour (time):", most_dangerous_time)
 
-
-# ------------------------------
-# Visualization
-# ------------------------------
 
 
 # Reverse the white->red list so that the first color (lowest safety) is red
