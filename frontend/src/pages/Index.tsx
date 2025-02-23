@@ -246,7 +246,11 @@ const Index = () => {
               <div className="order-1 md:order-2">
                 <div className="aspect-w-16 aspect-h-9 bg-white/5 rounded-2xl flex items-center justify-center">
                   <div className="text-white/30">
-                    Alert System Visualization
+                    <img
+                      alt="SOS Alert"
+                      className="rounded-2xl shadow-2xl scale-50"
+                      src="/lovable-uploads/sos.png"
+                    />
                   </div>
                 </div>
               </div>
