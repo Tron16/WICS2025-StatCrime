@@ -76,7 +76,7 @@ const Index = () => {
                 "Los Angeles",
                 "Chicago",
                 "Houston",
-                "Washington DC",
+                "Washington",
               ].map((city, index) => (
                 <div key={city} className="animate-on-load opacity-0">
                   <CityButton
@@ -85,7 +85,7 @@ const Index = () => {
                     onClick={() =>
                       handleCityClick(
                         city,
-                        ["NY", "CA", "IL", "TX", "VA"][index]
+                        ["NY", "CA", "IL", "TX", "DC"][index]
                       )
                     }
                   />

@@ -70,8 +70,8 @@ const CityStats = () => {
       safehour: "7 am",
     },
     {
-      name: "Washington DC",
-      state: "VA",
+      name: "Washington",
+      state: "DC",
       safetyscore: "23",
       highrisk: "/lovable-uploads/crimedata/dchighrisk.jpeg",
       timeofcrime: "/lovable-uploads/crimedata/dctimeofday.png",
